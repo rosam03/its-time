@@ -29,7 +29,7 @@ Results can be seen via command-line or printed in a Slack channel of your choos
 
 Notes:
  - The config file should be named ```config.yaml``` in order to be readable by the default scripts.
- - To edit where the scripts read this file from, edit the CONFIG variable containing the filename at the bottom of the script before main() is called.
+ - To edit where the scripts read this file from, edit the CONFIG variable containing the filename at the bottom of the script before `main()` is called.
 
 ## slack integration
 
@@ -37,7 +37,7 @@ To display the results in a Slack channel, see their api bot documentation to ob
 
 If you don't want to use the Slack integration, comment out
 `slackMessage(SLACK_TOKEN, SLACK_CHANNEL, SLACK_NAME, SLACK_TEXT, attachments)``
-in the else statement in `main()`` with the default `config.yaml` values. Alternatively, you can erase the functions and dependencies (`config.yaml, slackMessage(), main()`).
+in the else statement in `main()` with the default `config.yaml` values. Alternatively, you can erase the functions and dependencies (`config.yaml, slackMessage(), main()`).
 
 ## set up
 
