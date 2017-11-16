@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat domains.txt | while read line; do echo $line, >> ./output.txt; curl -v -k -m 1 --silent https://$line 2>&1 | grep "start date:" >> ./output.txt; curl -v -k -m 1 --silent https://$line 2>&1 | grep "expire date:" >> ./output.txt; curl -v -k -3 -m 1 --silent https://$line 2>&1 | grep "start date:" >> ./output.txt; curl -v -k -3 -m 1 --silent https://$line 2>&1 | grep "expire date:" >> ./output.txt; curl -v -k -2 -m 1 --silent https://$line 2>&1 | grep "start date:" >> ./output.txt; curl -v -k -2 -m 1 --silent https://$line 2>&1 | grep "expire date:" >> ./output.txt; curl -v -k -1 -m 1 --silent https://$line 2>&1 | grep "start date:" >> ./output.txt; curl -v -k -1 -m 1 --silent https://$line 2>&1 | grep "expire date:" >> ./output.txt; echo "done partial search" >> ./output.txt; done
+python cert_expiring.py
