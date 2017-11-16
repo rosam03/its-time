@@ -27,7 +27,7 @@ Results can be seen via command-line or printed in a Slack channel of your choos
   slack_attachment_title:
 ```
 
-* Notes:
+Notes:
  - The config file should be named ```config.yaml``` in order to be readable by the default scripts.
  - To edit where the scripts read this file from, edit the CONFIG variable containing the filename at the bottom of the script before main() is called.
 
@@ -49,9 +49,9 @@ Ensure the file names you use correspond to those in `config.yaml`:
 `config['ssl_dates_file']` is the output file containing the domains and ssl dates (originally `output.txt`)
 
 2) Run the bash script -> `./chron.sh`
-* Note: ensure the script has execute permissions via `chmod u+x chron.sh`
+Note: ensure the script has execute permissions via `chmod u+x chron.sh`
 
-* What happens?
+What happens?
  - Iterates through the list of domains generated in the loop in the bash script, collects SSL certificate details, and writes to output.txt which will then be used in certs_expiring.py
  - The openssl command exhausts connecting to all SSL/TLS versions as some sites may not support the default version of TLS/SSL that cURL uses. To ensure we are retreieving SSL certificate details for all sites, we must perform this exhaustive command.
 
