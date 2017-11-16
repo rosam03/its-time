@@ -47,10 +47,11 @@ in the else statement in main() with the default config.yaml values. Alternative
 
 Warning: The file names we use are domains.txt and output.txt, if they exist prior to running the program, they will be deleted. To change the file names used, go to the chron file and modify all file calls in the command containing 'cat domains.txt | while '.
 
-Ensure the file names you use correspond to those in the config.yaml file:
-config['ssl_dates_file'] is the output file containing the domains and ssl dates (originally output.txt)
+Ensure the file names you use correspond to those in `config.yaml`:
+`config['ssl_dates_file']` is the output file containing the domains and ssl dates (originally `output.txt`)
 
-2) Run the bash script -> ./chron
+2) Run the bash script -> `./chron.sh`
+* Note: ensure the script has execute permissions via `chmod u+x chron.sh`
 
 * What happens?
  - Iterates through the list of domains generated in the loop in the bash script, collects SSL certificate details, and writes to output.txt which will then be used in certs_expiring.py
